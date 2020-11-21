@@ -1,3 +1,4 @@
+import 'package:aasha/screens/about.dart';
 import 'package:aasha/screens/news.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -59,7 +60,16 @@ class HomeScreen extends StatelessWidget {
                         },
                         child: button("News"),
                       ),
-                      GestureDetector(child: button("About")),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => AboutScreen()),
+                          );
+                        },
+                        child: button("About"),
+                      ),
                     ],
                   ),
                 ),

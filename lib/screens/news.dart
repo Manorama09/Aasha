@@ -26,7 +26,7 @@ class _NewsScreenState extends State<NewsScreen> {
         elevation: 0.1,
         backgroundColor: const Color(0xffF4EEFF),
         title: Padding(
-          padding: const EdgeInsets.fromLTRB(90,0,0,0),
+          padding: const EdgeInsets.fromLTRB(90, 0, 0, 0),
           child: Text("News",
               style: GoogleFonts.dancingScript(
                   color: const Color(0xff1E2558),
@@ -39,21 +39,31 @@ class _NewsScreenState extends State<NewsScreen> {
           shrinkWrap: true,
           itemCount: data == null ? 0 : data.length,
           itemBuilder: (BuildContext context, i) {
-            return Card(
-                elevation: 8.0,
-                margin:
-                    new EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
-                child: Container(
-                  decoration:
-                      BoxDecoration(color:const Color(0xffB180FE).withOpacity(0.5)),
-                  child: new ListTile(
-                    contentPadding:
-                        EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-                    title: new Text(data[i]["id_str"]),
-                    subtitle: new Text(data[i]["full_text"]),
-                    onTap: () => _launchURL(i, context),
-                  ),
-                ));
+            return Container(
+              margin: EdgeInsets.symmetric(horizontal: 10, vertical: 2),
+              child: Card(
+                  elevation: 8.0,
+                  margin:
+                      new EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: const Color(0xffB180FE).withOpacity(0.45)),
+                    child: new ListTile(
+                      contentPadding: EdgeInsets.symmetric(
+                          horizontal: 20.0, vertical: 10.0),
+                      title: new Text(data[i]["id_str"],
+                          style: GoogleFonts.workSans(
+                              color: const Color(0xff1E2558),
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600)),
+                      subtitle: Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
+                        child: new Text(data[i]["full_text"]),
+                      ),
+                      onTap: () => _launchURL(i, context),
+                    ),
+                  )),
+            );
           }),
     );
   }
