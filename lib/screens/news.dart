@@ -42,7 +42,7 @@ class _NewsScreenState extends State<NewsScreen> {
             return Container(
               margin: EdgeInsets.symmetric(horizontal: 10, vertical: 2),
               child: Card(
-                  elevation: 8.0,
+                  elevation: 3.0,
                   margin:
                       new EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
                   child: Container(

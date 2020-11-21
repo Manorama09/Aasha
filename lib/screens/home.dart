@@ -1,5 +1,7 @@
 import 'package:aasha/screens/about.dart';
+import 'package:aasha/screens/ranks.dart';
 import 'package:aasha/screens/news.dart';
+import 'package:aasha/screens/tasks.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -41,8 +43,26 @@ class HomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                   child: Row(
                     children: <Widget>[
-                      button("Tasks"),
-                      button("Ranks"),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => TasksScreen()),
+                          );
+                        },
+                        child: button("Tasks"),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => RanksScreen()),
+                          );
+                        },
+                        child: button("Ranks"),
+                      ),
                     ],
                   ),
                 ),
