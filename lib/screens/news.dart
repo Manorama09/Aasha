@@ -2,6 +2,7 @@ import 'package:twitter_api/twitter_api.dart';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class NewsScreen extends StatefulWidget {
   @override
@@ -20,11 +21,18 @@ class _NewsScreenState extends State<NewsScreen> {
   Widget build(BuildContext context) {
     tweets();
     return Scaffold(
-      backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
+      backgroundColor: const Color(0xffF4EEFF),
       appBar: new AppBar(
         elevation: 0.1,
-        backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
-        title: Text("Articles", style: TextStyle(color: Colors.white),),
+        backgroundColor: const Color(0xffF4EEFF),
+        title: Padding(
+          padding: const EdgeInsets.fromLTRB(90,0,0,0),
+          child: Text("News",
+              style: GoogleFonts.dancingScript(
+                  color: const Color(0xff1E2558),
+                  fontSize: 35,
+                  fontWeight: FontWeight.w700)),
+        ),
       ),
       body: new ListView.builder(
           scrollDirection: Axis.vertical,
@@ -37,7 +45,7 @@ class _NewsScreenState extends State<NewsScreen> {
                     new EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
                 child: Container(
                   decoration:
-                      BoxDecoration(color: (Colors.white)),
+                      BoxDecoration(color:const Color(0xffB180FE).withOpacity(0.5)),
                   child: new ListTile(
                     contentPadding:
                         EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),

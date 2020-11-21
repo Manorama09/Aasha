@@ -1,4 +1,4 @@
-import 'package:aasha/screens/news.dart';
+import 'package:aasha/screens/welcome.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.amber,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: NewsScreen(),
+      home: WelcomeScreen(),
     );
   }
 }

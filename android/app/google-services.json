@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "178963641567",
+    "firebase_url": "https://aasha-f1d9c.firebaseio.com",
+    "project_id": "aasha-f1d9c",
+    "storage_bucket": "aasha-f1d9c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:178963641567:android:28191f938a5b28e6c1256a",
+        "android_client_info": {
+          "package_name": "com.example.aasha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "178963641567-disq2kl26ome678qvrvjqvhsalitg9ds.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfNaACCnCm7W37PXqu58pIcL83KTYumwY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "178963641567-disq2kl26ome678qvrvjqvhsalitg9ds.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
