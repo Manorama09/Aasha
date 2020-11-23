@@ -51,14 +51,14 @@ class _NewsScreenState extends State<NewsScreen> {
                     child: new ListTile(
                       contentPadding: EdgeInsets.symmetric(
                           horizontal: 20.0, vertical: 10.0),
-                      title: new Text(data[i]["id_str"],
+                      title: new Text((data[i]["full_text"]).substring(3, (data[i]["full_text"]).indexOf(':')),
                           style: GoogleFonts.workSans(
                               color: const Color(0xff1E2558),
                               fontSize: 16,
                               fontWeight: FontWeight.w600)),
                       subtitle: Padding(
                         padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
-                        child: new Text(data[i]["full_text"]),
+                        child: new Text((data[i]["full_text"]).substring((data[i]["full_text"]).indexOf(':')+2)),
                       ),
                       onTap: () => _launchURL(i, context),
                     ),
