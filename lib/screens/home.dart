@@ -1,4 +1,5 @@
 import 'package:aasha/screens/about.dart';
+import 'package:aasha/screens/chart.dart';
 import 'package:aasha/screens/ranks.dart';
 import 'package:aasha/screens/news.dart';
 import 'package:aasha/screens/tasks.dart';
@@ -89,6 +90,33 @@ class HomeScreen extends StatelessWidget {
                           );
                         },
                         child: button("About"),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                  child: Row(
+                    children: <Widget>[
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => LineChartSample2()),
+                          );
+                        },
+                        child: button("Chart"),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => AboutScreen()),
+                          );
+                        },
+                        child: button("None"),
                       ),
                     ],
                   ),
