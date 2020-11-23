@@ -105,9 +105,10 @@ class _NewsScreenState extends State<NewsScreen> {
   }
 
   _launchURL(var index, BuildContext context) async {
-    var url = (data[index]["entities"]["urls"]["expanded_url"]).toString();
-    print(url);
     print(data[index]["id_str"]);
+    var url = ("https://twitter.com/anyuser/status/"+data[index]["id_str"]);
+    print(url);
+    
     if (await canLaunch(url)) {
       await launch(url);
     } else {
