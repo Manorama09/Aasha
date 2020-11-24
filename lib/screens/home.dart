@@ -7,19 +7,21 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatelessWidget {
-  Widget button(String s) {
+  Widget button(String s, BuildContext context) {
     return Container(
+      width: MediaQuery.of(context).size.width / 2.1,
+      height: MediaQuery.of(context).size.height / 3.5,
       child: Padding(
-        padding: const EdgeInsets.all(45.0),
+        padding: const EdgeInsets.symmetric(horizontal: 45.0, vertical: 80),
         child: Text(s,
             style: GoogleFonts.dancingScript(
                 color: Colors.white,
-                fontSize: 35,
+                fontSize: 45,
                 fontWeight: FontWeight.w700)),
       ),
-      margin: EdgeInsets.all(10.0),
-      decoration:
-          BoxDecoration(color: const Color(0xffAF80FE), shape: BoxShape.circle),
+      margin: EdgeInsets.all(4.0),
+      decoration: BoxDecoration(
+          color: const Color(0xffAF80FE), shape: BoxShape.rectangle),
     );
   }
 
@@ -27,21 +29,35 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: const Color(0xffF4EEFF),
+        appBar: new AppBar(
+          elevation: 0.1,
+          backgroundColor: const Color(0xffF4EEFF),
+          title: Padding(
+            padding: const EdgeInsets.fromLTRB(65, 0, 0, 0),
+            child: Row(children: <Widget>[
+              Container(
+                width: 36,
+                height: 36,
+                child: Image.asset('./images/logo.png'),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(10,0,0,0),
+                child: Text("Aasha",
+                    style: GoogleFonts.dancingScript(
+                        color: const Color(0xff1E2558),
+                        fontSize: 35,
+                        fontWeight: FontWeight.w700)),
+              ),
+            ]),
+          ),
+        ),
         body: Center(
           child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Text("Heading",
-                    style: GoogleFonts.dancingScript(
-                        color: const Color(0xff1E2558),
-                        fontSize: 80,
-                        fontWeight: FontWeight.w700)),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height / 10,
-                ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                   child: Row(
                     children: <Widget>[
                       GestureDetector(
@@ -52,7 +68,7 @@ class HomeScreen extends StatelessWidget {
                                 builder: (context) => TasksScreen()),
                           );
                         },
-                        child: button("Tasks"),
+                        child: button("Tasks", context),
                       ),
                       GestureDetector(
                         onTap: () {
@@ -62,13 +78,13 @@ class HomeScreen extends StatelessWidget {
                                 builder: (context) => RanksScreen()),
                           );
                         },
-                        child: button("Ranks"),
+                        child: button("Rank", context),
                       ),
                     ],
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                   child: Row(
                     children: <Widget>[
                       GestureDetector(
@@ -79,7 +95,7 @@ class HomeScreen extends StatelessWidget {
                                 builder: (context) => NewsScreen()),
                           );
                         },
-                        child: button("News"),
+                        child: button("News", context),
                       ),
                       GestureDetector(
                         onTap: () {
@@ -89,13 +105,13 @@ class HomeScreen extends StatelessWidget {
                                 builder: (context) => AboutScreen()),
                           );
                         },
-                        child: button("About"),
+                        child: button("About", context),
                       ),
                     ],
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                   child: Row(
                     children: <Widget>[
                       GestureDetector(
@@ -106,7 +122,7 @@ class HomeScreen extends StatelessWidget {
                                 builder: (context) => LineChartSample2()),
                           );
                         },
-                        child: button("Chart"),
+                        child: button("Chart", context),
                       ),
                       GestureDetector(
                         onTap: () {
@@ -116,7 +132,7 @@ class HomeScreen extends StatelessWidget {
                                 builder: (context) => AboutScreen()),
                           );
                         },
-                        child: button("None"),
+                        child: button("None", context),
                       ),
                     ],
                   ),
