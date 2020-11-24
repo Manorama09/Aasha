@@ -2,6 +2,7 @@ import 'package:aasha/screens/about.dart';
 import 'package:aasha/screens/chart.dart';
 import 'package:aasha/screens/ranks.dart';
 import 'package:aasha/screens/news.dart';
+import 'package:aasha/screens/settings.dart';
 import 'package:aasha/screens/tasks.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -129,10 +130,10 @@ class HomeScreen extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => AboutScreen()),
+                                builder: (context) => SettingsScreen()),
                           );
                         },
-                        child: button("None", context),
+                        child: button("Settings", context),
                       ),
                     ],
                   ),
