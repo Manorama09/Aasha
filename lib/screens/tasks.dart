@@ -9,7 +9,8 @@ class TasksScreen extends StatefulWidget {
 class _TasksScreenState extends State<TasksScreen> {
   Widget task(String s) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 10, vertical: 2),
+      width: MediaQuery.of(context).size.width,
+      margin: EdgeInsets.symmetric(horizontal: 2, vertical: 1),
       child: Card(
           elevation: 4.0,
           margin: new EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
@@ -18,7 +19,7 @@ class _TasksScreenState extends State<TasksScreen> {
                   color: const Color(0xffB180FE).withOpacity(0.45)),
               child: Padding(
                 padding:
-                    const EdgeInsets.symmetric(vertical: 12.0, horizontal: 60),
+                    const EdgeInsets.symmetric(vertical: 12.0, horizontal: 30),
                 child: Text(s,
                     style: GoogleFonts.workSans(
                         color: const Color(0xff1E2558),
@@ -54,23 +55,21 @@ class _TasksScreenState extends State<TasksScreen> {
         ),
         body: TabBarView(
           children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+            ListView(
               children: <Widget>[
-                task("#1 Waste Segregation"),
-                task("#2 Waste Segregation"),
-                task("#3 Waste Segregation"),
-                task("#4 Waste Segregation"),
-                task("#5 Waste Segregation"),
-                task("#6 Waste Segregation"),
+                task("#1 Together we travel"),
+                task("#2 Clean your town, clean your planet."),
+                task("#3 Put waste in the right place."),
+                task("#4 Go green, plant trees."),
+                task("#5 Recycle the present, save the future."),
+                task("#6 Cut the plastic!"),
                 task("#7 Waste Segregation"),
                 task("#8 Waste Segregation"),
                 task("#9 Waste Segregation"),
                 task("#10 Waste Segregation"),
               ],
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+            ListView(
               children: <Widget>[
                 task("#1 Waste Segregation"),
                 task("#2 Waste Segregation"),
