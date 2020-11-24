@@ -30,34 +30,62 @@ class _TasksScreenState extends State<TasksScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xffF4EEFF),
-      appBar: new AppBar(
-        elevation: 0.1,
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
         backgroundColor: const Color(0xffF4EEFF),
-        title: Padding(
-          padding: const EdgeInsets.fromLTRB(90, 0, 0, 0),
-          child: Text("Tasks",
-              style: GoogleFonts.dancingScript(
-                  color: const Color(0xff1E2558),
-                  fontSize: 45,
-                  fontWeight: FontWeight.w700)),
+        appBar: new AppBar(
+          elevation: 0.1,
+          backgroundColor: const Color(0xffF4EEFF),
+          title: Padding(
+            padding: const EdgeInsets.fromLTRB(90, 0, 0, 0),
+            child: Text("Tasks",
+                style: GoogleFonts.dancingScript(
+                    color: const Color(0xff1E2558),
+                    fontSize: 45,
+                    fontWeight: FontWeight.w700)),
+          ),
+          bottom: TabBar(
+            tabs: [
+              Tab(icon: Icon(Icons.list)),
+              Tab(icon: Icon(Icons.note)),
+            ],
+          ),
         ),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          task("#1 Waste Segregation"),
-          task("#2 Waste Segregation"),
-          task("#3 Waste Segregation"),
-          task("#4 Waste Segregation"),
-          task("#5 Waste Segregation"),
-          task("#6 Waste Segregation"),
-          task("#7 Waste Segregation"),
-          task("#8 Waste Segregation"),
-          task("#9 Waste Segregation"),
-          task("#10 Waste Segregation"),
-        ],
+        body: TabBarView(
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                task("#1 Waste Segregation"),
+                task("#2 Waste Segregation"),
+                task("#3 Waste Segregation"),
+                task("#4 Waste Segregation"),
+                task("#5 Waste Segregation"),
+                task("#6 Waste Segregation"),
+                task("#7 Waste Segregation"),
+                task("#8 Waste Segregation"),
+                task("#9 Waste Segregation"),
+                task("#10 Waste Segregation"),
+              ],
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                task("#1 Waste Segregation"),
+                task("#2 Waste Segregation"),
+                task("#3 Waste Segregation"),
+                task("#4 Waste Segregation"),
+                task("#5 Waste Segregation"),
+                task("#6 Waste Segregation"),
+                task("#7 Waste Segregation"),
+                task("#8 Waste Segregation"),
+                task("#9 Waste Segregation"),
+                task("#10 Waste Segregation"),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

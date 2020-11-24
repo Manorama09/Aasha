@@ -31,7 +31,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 SizedBox(
                   height: MediaQuery.of(context).size.height / 75,
                 ),
-                Text("With hope, we can.",
+                Text("Join the green side.",
                     style: GoogleFonts.workSans(
                         color: const Color(0xff1E2558),
                         fontSize: 20,
