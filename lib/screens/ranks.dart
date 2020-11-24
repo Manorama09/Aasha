@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 class RanksScreen extends StatelessWidget {
- Widget task(String s, BuildContext context) {
+  Widget rank(String s, BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width/1,
+      width: MediaQuery.of(context).size.width / 1,
       margin: EdgeInsets.symmetric(horizontal: 10, vertical: 2),
       child: Card(
           elevation: 4.0,
@@ -24,29 +25,62 @@ class RanksScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xffF4EEFF),
-      appBar: new AppBar(
-        elevation: 0.1,
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
         backgroundColor: const Color(0xffF4EEFF),
-        title: Padding(
-          padding: const EdgeInsets.fromLTRB(90, 0, 0, 0),
-          child: Text("Ranks",
-              style: GoogleFonts.dancingScript(
-                  color: const Color(0xff1E2558),
-                  fontSize: 45,
-                  fontWeight: FontWeight.w700)),
+        appBar: new AppBar(
+          elevation: 0.1,
+          backgroundColor: const Color(0xffF4EEFF),
+          title: Padding(
+            padding: const EdgeInsets.fromLTRB(80, 0, 0, 0),
+            child: Text("Ranks",
+                style: GoogleFonts.dancingScript(
+                    color: const Color(0xff1E2558),
+                    fontSize: 45,
+                    fontWeight: FontWeight.w700)),
+          ),
+          bottom: TabBar(
+            tabs: [
+              Tab(icon: Icon(Icons.people)),
+              Tab(icon: Icon(Icons.location_city)),
+            ],
+          ),
         ),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          task("#1 Manorama Maharana",context),
-          task("#2 Kartavya Asthana",context),
-          task("#3 Riddhi Gupta",context),
-          task("#4 Saloni Parekh",context),
-          task("#5 Sanchi Chopra",context),
-        ],
+        body: TabBarView(
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                rank("#1 Manorama Maharana", context),
+                rank("#2 Kartavya Asthana", context),
+                rank("#3 Riddhi Gupta", context),
+                rank("#4 Saloni Parekh", context),
+                rank("#5 Sanchi Chopra", context),
+                rank("#6 Saksham Gupta", context),
+                rank("#7 Abhishek Singh", context),
+                rank("#8 Ritika Kayal", context),
+                rank("#9 Anusuiya Bora", context),
+                rank("#10 Aditi Goel", context),
+              ],
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                rank("#1 Indore", context),
+                rank("#2 Surat", context),
+                rank("#3 Navi Mumbai", context),
+                rank("#4 Ambikapur", context),
+                rank("#5 Mysore", context),
+                rank("#6 Vijayawada", context),
+                rank("#7 Ahmedabad", context),
+                rank("#8 New Delhi", context),
+                rank("#9 Chandrapur", context),
+                rank("#10 Khargone", context),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
