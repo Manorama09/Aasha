@@ -1,5 +1,6 @@
 import 'package:aasha/screens/about.dart';
-import 'package:aasha/screens/chart.dart';
+import 'package:aasha/screens/analysis.dart';
+import 'package:aasha/widgets/chart1.dart';
 import 'package:aasha/screens/ranks.dart';
 import 'package:aasha/screens/news.dart';
 import 'package:aasha/screens/settings.dart';
@@ -120,7 +121,7 @@ class HomeScreen extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => LineChartSample2()),
+                                builder: (context) => Analysis()),
                           );
                         },
                         child: button("Chart", context),
