@@ -7,6 +7,8 @@ import 'package:aasha/screens/settings.dart';
 import 'package:aasha/screens/tasks.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'welcome.dart';
+import 'sign_in.dart';
 
 class HomeScreen extends StatelessWidget {
   Widget button(String s, BuildContext context) {
