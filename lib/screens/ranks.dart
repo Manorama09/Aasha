@@ -44,15 +44,14 @@ class RanksScreen extends StatelessWidget {
           ),
           bottom: TabBar(
             tabs: [
-              Tab(icon: Icon(Icons.people)),
-              Tab(icon: Icon(Icons.location_city)),
+              Tab(child:Text("Individual"),icon: Icon(Icons.people)),
+              Tab(child:Text("Regions"),icon: Icon(Icons.location_city)),
             ],
           ),
         ),
         body: TabBarView(
           children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+            ListView(
               children: <Widget>[
                 rank("#1 Manorama Maharana", context),
                 rank("#2 Kartavya Asthana", context),
@@ -66,8 +65,7 @@ class RanksScreen extends StatelessWidget {
                 rank("#10 Aditi Goel", context),
               ],
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+            ListView(
               children: <Widget>[
                 rank("#1 Indore", context),
                 rank("#2 Surat", context),

@@ -58,8 +58,8 @@ class _TasksScreenState extends State<TasksScreen> {
           ),
           bottom: TabBar(
             tabs: [
-              Tab(icon: Icon(Icons.list)),
-              Tab(icon: Icon(Icons.note)),
+              Tab(child:Text("Daily Tasks"),icon: Icon(Icons.list)),
+              Tab(child:Text("Long Tasks"),icon: Icon(Icons.note)),
             ],
           ),
         ),

@@ -93,7 +93,7 @@ class HomeScreen extends StatelessWidget {
                           );
                         },
                         child: button(
-                            "Rank",
+                            "Ranks",
                             context,
                             Icon(
                               Icons.list,
