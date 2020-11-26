@@ -18,7 +18,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     String dropdownValue1 = 'Bangalore';
 
     return Scaffold(
-     // bottomNavigationBar: BottomNavBar(),
+        // bottomNavigationBar: BottomNavBar(),
         backgroundColor: const Color(0xffF4EEFF),
         appBar: new AppBar(
           elevation: 0.1,
@@ -94,8 +94,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             dropdownValue1 = newValue;
                           });
                         },
-                        items: <String>['Bangalore', 'Delhi', 'Chennai', 'Mumbai']
-                            .map<DropdownMenuItem<String>>((String value) {
+                        items: <String>[
+                          'Bangalore',
+                          'Delhi',
+                          'Chennai',
+                          'Mumbai'
+                        ].map<DropdownMenuItem<String>>((String value) {
                           return DropdownMenuItem<String>(
                             value: value,
                             child: Text(value),
@@ -103,23 +107,32 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         }).toList(),
                       ),
                     ]),
-                    RaisedButton(
-                onPressed: () {
-                  signOutGoogle();
-                  Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) {return WelcomeScreen();}), ModalRoute.withName('/'));
-                },
-                color: Colors.deepPurple,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Sign Out',
-                    style: TextStyle(fontSize: 25, color: Colors.white),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 40.0),
+                  child: RaisedButton(
+                    onPressed: () {
+                      signOutGoogle();
+                      Navigator.of(context).pushAndRemoveUntil(
+                          MaterialPageRoute(builder: (context) {
+                        return WelcomeScreen();
+                      }), ModalRoute.withName('/'));
+                    },
+                    color: Colors.deepPurple,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(vertical:8.0,horizontal: 50),
+                      child: Text(
+                        'Sign Out',
+                        style: GoogleFonts.workSans(
+                              color: Colors.white,
+                              fontSize: 22,
+                              fontWeight: FontWeight.w500)
+                      ),
+                    ),
+                    elevation: 5,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(40)),
                   ),
-                ),
-                elevation: 5,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(40)),
-              )
+                )
               ]),
         ));
   }
