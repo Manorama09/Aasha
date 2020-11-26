@@ -2,6 +2,7 @@ import 'package:aasha/screens/task_detail.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import '../widgets/bottomNavBar.dart';
 
 class TasksScreen extends StatefulWidget {
   @override
@@ -110,6 +111,7 @@ class _TasksScreenState extends State<TasksScreen> {
             ),
           ],
         ),
+        //bottomNavigationBar: BottomNavBar(),
       ),
     );
   }

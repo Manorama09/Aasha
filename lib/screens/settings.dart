@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'sign_in.dart';
 import 'welcome.dart';
+import '../widgets/bottomNavBar.dart';
+
 class SettingsScreen extends StatefulWidget {
   @override
   _SettingsScreenState createState() => _SettingsScreenState();
@@ -16,6 +18,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     String dropdownValue1 = 'Bangalore';
 
     return Scaffold(
+     // bottomNavigationBar: BottomNavBar(),
         backgroundColor: const Color(0xffF4EEFF),
         appBar: new AppBar(
           elevation: 0.1,

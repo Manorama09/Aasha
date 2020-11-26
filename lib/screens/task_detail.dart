@@ -2,6 +2,7 @@ import 'package:aasha/screens/home.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../widgets/bottomNavBar.dart';
 
 class TaskDetail extends StatefulWidget {
   final DocumentSnapshot post;
@@ -15,6 +16,7 @@ class _TaskDetailState extends State<TaskDetail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //bottomNavigationBar: BottomNavBar(),
         backgroundColor: const Color(0xffF4EEFF),
         appBar: new AppBar(
           elevation: 0.1,

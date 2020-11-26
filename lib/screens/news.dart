@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../widgets/bottomNavBar.dart';
 
 class NewsScreen extends StatefulWidget {
   @override
@@ -21,6 +22,7 @@ class _NewsScreenState extends State<NewsScreen> {
   Widget build(BuildContext context) {
     tweets();
     return Scaffold(
+      //bottomNavigationBar: BottomNavBar(),
       backgroundColor: const Color(0xffF4EEFF),
       appBar: new AppBar(
         elevation: 0.1,
