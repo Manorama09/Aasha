@@ -1,5 +1,7 @@
+import 'package:aasha/screens/task_detail.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class TasksScreen extends StatefulWidget {
   @override
@@ -23,12 +25,18 @@ class _TasksScreenState extends State<TasksScreen> {
                 child: Text(s,
                     style: GoogleFonts.workSans(
                         color: const Color(0xff1E2558),
-                        fontSize: 20,
+                        fontSize: 18,
                         fontWeight: FontWeight.w400)),
               ))),
     );
   }
 
+  navigateToDetail(DocumentSnapshot post) {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => TaskDetail(post)));
+  }
+
+  CollectionReference tasks = FirebaseFirestore.instance.collection('tasks');
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -55,19 +63,27 @@ class _TasksScreenState extends State<TasksScreen> {
         ),
         body: TabBarView(
           children: [
-            ListView(
-              children: <Widget>[
-                task("#1 Together we travel"),
-                task("#2 Clean your town, clean your planet."),
-                task("#3 Put waste in the right place."),
-                task("#4 Go green, plant trees."),
-                task("#5 Recycle the present, save the future."),
-                task("#6 Cut the plastic!"),
-                task("#7 Waste Segregation"),
-                task("#8 Waste Segregation"),
-                task("#9 Waste Segregation"),
-                task("#10 Waste Segregation"),
-              ],
+            StreamBuilder<QuerySnapshot>(
+              stream: tasks.snapshots(),
+              builder: (BuildContext context,
+                  AsyncSnapshot<QuerySnapshot> snapshot) {
+                if (snapshot.hasError) {
+                  return Text('Something went wrong!');
+                }
+
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return Text("Loading");
+                }
+
+                return new ListView(
+                  children: snapshot.data.docs.map((DocumentSnapshot document) {
+                    return new ListTile(
+                      title: task(document.data()['name']),
+                      onTap: () => navigateToDetail(document),
+                    );
+                  }).toList(),
+                );
+              },
             ),
             ListView(
               children: <Widget>[
@@ -76,11 +92,6 @@ class _TasksScreenState extends State<TasksScreen> {
                 task("#3 Waste Segregation"),
                 task("#4 Waste Segregation"),
                 task("#5 Waste Segregation"),
-                task("#6 Waste Segregation"),
-                task("#7 Waste Segregation"),
-                task("#8 Waste Segregation"),
-                task("#9 Waste Segregation"),
-                task("#10 Waste Segregation"),
               ],
             ),
           ],
