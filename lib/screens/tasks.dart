@@ -37,6 +37,7 @@ class _TasksScreenState extends State<TasksScreen> {
   }
 
   CollectionReference tasks = FirebaseFirestore.instance.collection('tasks');
+  CollectionReference ltasks = FirebaseFirestore.instance.collection('longTasks');
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -85,14 +86,27 @@ class _TasksScreenState extends State<TasksScreen> {
                 );
               },
             ),
-            ListView(
-              children: <Widget>[
-                task("#1 Waste Segregation"),
-                task("#2 Waste Segregation"),
-                task("#3 Waste Segregation"),
-                task("#4 Waste Segregation"),
-                task("#5 Waste Segregation"),
-              ],
+             StreamBuilder<QuerySnapshot>(
+              stream: ltasks.snapshots(),
+              builder: (BuildContext context,
+                  AsyncSnapshot<QuerySnapshot> snapshot) {
+                if (snapshot.hasError) {
+                  return Text('Something went wrong!');
+                }
+
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return Text("Loading");
+                }
+
+                return new ListView(
+                  children: snapshot.data.docs.map((DocumentSnapshot document) {
+                    return new ListTile(
+                      title: task(document.data()['name']),
+                      onTap: () => navigateToDetail(document),
+                    );
+                  }).toList(),
+                );
+              },
             ),
           ],
         ),
