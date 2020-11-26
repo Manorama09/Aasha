@@ -1,4 +1,5 @@
 import 'package:aasha/widgets/chart1.dart';
+import 'package:aasha/widgets/chart2.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -28,7 +29,7 @@ class _AnalysisState extends State<Analysis> {
         children: <Widget>[
           Chart1(),
           SizedBox(height:5),
-          Chart1(),
+          Chart2(),
           SizedBox(height:5),
           Chart1(),
           SizedBox(height:5),

@@ -2,12 +2,12 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Chart1 extends StatefulWidget {
+class Chart2 extends StatefulWidget {
   @override
-  _Chart1State createState() => _Chart1State();
+  _Chart2State createState() => _Chart2State();
 }
 
-class _Chart1State extends State<Chart1> {
+class _Chart2State extends State<Chart2> {
   List<Color> gradientColors = [
     const Color(0xff1E2558),
     const Color(0xff1E2558),
@@ -24,7 +24,7 @@ class _Chart1State extends State<Chart1> {
                 const SizedBox(
                   height: 30,
                 ),
-               Text("Air Quality Index [Nov 2020]",
+               Text("Mean DTR Trends [1951 -2010]",
                     style: GoogleFonts.openSans(
                         color: const Color(0xff1E2558),
                         fontSize: 18,
@@ -79,13 +79,13 @@ class _Chart1State extends State<Chart1> {
               case 1:
               return 'DEL';
               case 3:
-                return 'BLR';
+                return 'KAR';
               case 5:
-                return 'BOM';
+                return 'MAH';
               case 7:
-                return 'HYD';
+                return 'TN';
               case 9:
-                return 'KOL';
+                return 'UP';
             }
             return '';
           },
@@ -96,16 +96,20 @@ class _Chart1State extends State<Chart1> {
           getTextStyles: (value) => const TextStyle(
             color: Color(0xff67727d),
             fontWeight: FontWeight.bold,
-            fontSize: 15,
+            fontSize: 8,
           ),
           getTitles: (value) {
             switch (value.toInt()) {
               case 1:
-                return '100';
+                return 'Very Low';
+              case 2:
+                return 'Low';
               case 3:
-                return '150';
+                return 'No Trend';
+              case 4:
+                return 'High';
               case 5:
-                return '200';
+                return 'Very High';
             }
             return '';
           },
@@ -124,11 +128,11 @@ class _Chart1State extends State<Chart1> {
         LineChartBarData(
           spots: [
             FlSpot(0, 0),
-            FlSpot(1, 5),
-            FlSpot(3, 0.3),
-            FlSpot(5, 2.5),
-            FlSpot(7, 0.7),
-            FlSpot(9, 4),
+            FlSpot(1, 1),
+            FlSpot(3, 5),
+            FlSpot(5, 4),
+            FlSpot(7, 4),
+            FlSpot(9, 1),
             FlSpot(11, 0),
           ],
           isCurved: true,
