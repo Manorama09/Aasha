@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../widgets/bottomNavBar.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class TaskDetail extends StatefulWidget {
   final DocumentSnapshot post;
@@ -90,12 +91,7 @@ class _TaskDetailState extends State<TaskDetail> {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(40)),
                       color: const Color(0xff4DA6E9),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => HomeScreen()),
-                        );
-                      },
+                      onPressed: _launchURL,
                       child: Row(children: <Widget>[
                         Padding(
                           padding: const EdgeInsets.symmetric(
@@ -112,5 +108,13 @@ class _TaskDetailState extends State<TaskDetail> {
                     )),
               ]),
         ));
+  }
+  _launchURL() async {
+  const url = 'https://twitter.com/home';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
   }
 }
