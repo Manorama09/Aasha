@@ -13,13 +13,14 @@ class HomeScreen extends StatelessWidget {
       width: MediaQuery.of(context).size.width / 2.1,
       height: MediaQuery.of(context).size.height / 3.5,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 45.0, vertical: 60),
+        padding: const EdgeInsets.fromLTRB(30.0,60,30,40),
         child: Column(children: <Widget>[
           icon,
+          SizedBox(height:10),
           Text(s,
               style: GoogleFonts.openSans(
                   color: Colors.white,
-                  fontSize: 25,
+                  fontSize: 20,
                   fontWeight: FontWeight.w500)),
         ]),
       ),
@@ -76,7 +77,7 @@ class HomeScreen extends StatelessWidget {
                           );
                         },
                         child: button(
-                            "Tasks",
+                            "E- Challenges",
                             context,
                             Icon(
                               Icons.note,
@@ -93,7 +94,7 @@ class HomeScreen extends StatelessWidget {
                           );
                         },
                         child: button(
-                            "Ranks",
+                            "Rewards",
                             context,
                             Icon(
                               Icons.list,
@@ -117,7 +118,7 @@ class HomeScreen extends StatelessWidget {
                           );
                         },
                         child: button(
-                            "News",
+                            "Awareness",
                             context,
                             Icon(
                               Icons.info,
@@ -157,7 +158,7 @@ class HomeScreen extends StatelessWidget {
                           );
                         },
                         child: button(
-                            "Chart",
+                            "Analysis",
                             context,
                             Icon(
                               Icons.bar_chart,
