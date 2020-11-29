@@ -18,6 +18,7 @@
 1. Python
 2. Twitter API
 
-## Demo Video
+## Prototype
+<img src="https://j.gifs.com/Gv3j57.gif" width="600" height="350" />
 
 <p style="text-align:center">Made with :heart:</p>
