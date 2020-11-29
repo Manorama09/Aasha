@@ -1,9 +1,8 @@
-# Project Aasha
-### ~ Every Contribution Counts!
+## Project Aasha ~ Every Contribution Counts!
 
-## Introduction
+### Introduction
 
-## Features
+### Features
 1. E-Challenges : Various Challenges and Tasks that one can take up to address environmental concerns.
 2. Rewards : Based on the performance in the E-Challeneges, the users will be evaluated and a leaderboard will be maintained. (Individual & Region-wise)
 3. Awareness : Using the Twitter Bot (AashaBot), one will be notified on the latest happenings that relate to environmental concerns.
@@ -18,7 +17,9 @@
 1. Python
 2. Twitter API
 
-## Prototype
+### Prototype
 <img src="https://j.gifs.com/Gv3j57.gif" width="600" height="350" />
 
-<p style="text-align:center">Made with :heart:</p>
+<p align="center">
+	Made with :heart:
+</p>
