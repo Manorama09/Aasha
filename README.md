@@ -17,7 +17,11 @@
 1. Python
 2. Twitter API
 
-### Prototype
+
+### Aasha Bot Demo
+<img src="https://j.gifs.com/E83nWg.gif" width="600" height="350" />
+
+### Application Prototype
 <img src="https://j.gifs.com/AN337B.gif" width="600" height="350" />
 
 <p align="center">
