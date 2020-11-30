@@ -28,8 +28,8 @@ class _NewsScreenState extends State<NewsScreen> {
         elevation: 0.1,
         backgroundColor: const Color(0xffF4EEFF),
         title: Padding(
-          padding: const EdgeInsets.fromLTRB(40, 0, 0, 0),
-          child: Text("News / Articles",
+          padding: const EdgeInsets.fromLTRB(95, 0, 0, 0),
+          child: Text("News",
               style: GoogleFonts.dancingScript(
                   color: const Color(0xff1E2558),
                   fontSize: 35,

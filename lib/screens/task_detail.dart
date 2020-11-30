@@ -84,6 +84,12 @@ class _TaskDetailState extends State<TaskDetail> {
                         color: const Color(0xff1E2558),
                         fontSize: 16,
                         fontWeight: FontWeight.w500)),
+                SizedBox(height:20),
+                Text("Points : 15",
+                    style: GoogleFonts.openSans(
+                        color: const Color(0xff1E2558),
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700)),
                 Padding(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 50, vertical: 18.0),

@@ -14,7 +14,7 @@ class RanksScreen extends StatelessWidget {
                   color: const Color(0xffB180FE).withOpacity(0.45)),
               child: Padding(
                 padding:
-                    const EdgeInsets.symmetric(vertical: 12.0, horizontal: 60),
+                    const EdgeInsets.symmetric(vertical: 12.0, horizontal: 20),
                 child: Text(s,
                     style: GoogleFonts.workSans(
                         color: const Color(0xff1E2558),
@@ -53,16 +53,16 @@ class RanksScreen extends StatelessWidget {
           children: [
             ListView(
               children: <Widget>[
-                rank("#1 Manorama Maharana", context),
-                rank("#2 Kartavya Asthana", context),
-                rank("#3 Riddhi Gupta", context),
-                rank("#4 Saloni Parekh", context),
-                rank("#5 Sanchi Chopra", context),
-                rank("#6 Saksham Gupta", context),
-                rank("#7 Abhishek Singh", context),
-                rank("#8 Ritika Kayal", context),
-                rank("#9 Anusuiya Bora", context),
-                rank("#10 Aditi Goel", context),
+                rank("#1 Manorama Maharana        105", context),
+                rank("#2 Kartavya Asthana             95", context),
+                rank("#3 Riddhi Gupta                   85", context),
+                rank("#4 Saloni Parekh                  65", context),
+                rank("#5 Sanchi Chopra                 60", context),
+                rank("#6 Saksham Gupta               55", context),
+                rank("#7 Abhishek Singh                40", context),
+                rank("#8 Ritika Kayal                     35", context),
+                rank("#9 Anusuiya Bora                 30", context),
+                rank("#10 Aditi Goel                      15", context),
               ],
             ),
             ListView(

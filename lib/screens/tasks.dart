@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../widgets/bottomNavBar.dart';
+import '../icons/custom_icons_icons.dart';
 
 class TasksScreen extends StatefulWidget {
   @override
@@ -58,8 +59,8 @@ class _TasksScreenState extends State<TasksScreen> {
           ),
           bottom: TabBar(
             tabs: [
-              Tab(child:Text("Daily"),icon: Icon(Icons.list)),
-              Tab(child:Text("Long Term"),icon: Icon(Icons.calendar_today)),
+              Tab(child:Text("Daily Challenges"),icon: Icon(CustomIcons.calendar)),
+              Tab(child:Text("Lifestyle Changes"),icon: Icon(CustomIcons.ecology)),
             ],
           ),
         ),

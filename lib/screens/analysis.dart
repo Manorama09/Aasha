@@ -35,7 +35,7 @@ class _AnalysisState extends State<Analysis> {
           SizedBox(height:5),
           Chart1(),
           SizedBox(height:5),
-          Chart1(),
+          Chart2(),
         ],
         )
     );

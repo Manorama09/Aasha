@@ -6,6 +6,7 @@ import 'package:aasha/screens/settings.dart';
 import 'package:aasha/screens/tasks.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../icons/custom_icons_icons.dart';
 
 class HomeScreen extends StatelessWidget {
   Widget button(String s, BuildContext context, Icon icon) {
@@ -80,7 +81,7 @@ class HomeScreen extends StatelessWidget {
                             "E- Challenges",
                             context,
                             Icon(
-                              Icons.note,
+                              CustomIcons.target,
                               size: 60,
                               color: Colors.white,
                             )),
@@ -94,10 +95,10 @@ class HomeScreen extends StatelessWidget {
                           );
                         },
                         child: button(
-                            "Rewards",
+                            "Leaderboard",
                             context,
                             Icon(
-                              Icons.card_giftcard,
+                              CustomIcons.trophy,
                               size: 60,
                               color: Colors.white,
                             )),
@@ -121,7 +122,7 @@ class HomeScreen extends StatelessWidget {
                             "Awareness",
                             context,
                             Icon(
-                              Icons.info,
+                              CustomIcons.newspaper,
                               size: 60,
                               color: Colors.white,
                             )),
@@ -161,7 +162,7 @@ class HomeScreen extends StatelessWidget {
                             "Analysis",
                             context,
                             Icon(
-                              Icons.bar_chart,
+                              CustomIcons.research,
                               size: 60,
                               color: Colors.white,
                             )),
