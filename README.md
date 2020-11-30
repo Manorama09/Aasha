@@ -22,7 +22,7 @@
 <img src="https://j.gifs.com/E83nWg.gif" width="600" height="350" />
 
 ### Application Prototype
-<img src="https://j.gifs.com/AN337B.gif" width="600" height="350" />
+<img src="https://j.gifs.com/910VAB.gif" width="600" height="350" />
 
 <p align="center">
 	Made with :heart: to save our planet :earth_asia:
