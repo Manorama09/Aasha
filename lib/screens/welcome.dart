@@ -73,11 +73,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 SizedBox(
                   height: MediaQuery.of(context).size.height / 75,
                 ),
-                Text("Join the green side.",
-                    style: GoogleFonts.workSans(
+                Text("Every contribution counts!",
+                    style: GoogleFonts.robotoCondensed(
                         color: const Color(0xff1E2558),
                         fontSize: 20,
-                        fontWeight: FontWeight.w600)),
+                        fontWeight: FontWeight.w500)),
                 SizedBox(
                   height: MediaQuery.of(context).size.height / 25,
                 ),

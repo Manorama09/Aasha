@@ -19,8 +19,8 @@ class _AnalysisState extends State<Analysis> {
         elevation: 0.1,
         backgroundColor: const Color(0xffF4EEFF),
         title: Padding(
-          padding: const EdgeInsets.fromLTRB(90, 0, 0, 0),
-          child: Text("Charts",
+          padding: const EdgeInsets.fromLTRB(85, 0, 0, 0),
+          child: Text("Analysis",
               style: GoogleFonts.dancingScript(
                   color: const Color(0xff1E2558),
                   fontSize: 35,

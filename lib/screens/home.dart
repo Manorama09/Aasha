@@ -97,7 +97,7 @@ class HomeScreen extends StatelessWidget {
                             "Rewards",
                             context,
                             Icon(
-                              Icons.list,
+                              Icons.card_giftcard,
                               size: 60,
                               color: Colors.white,
                             )),

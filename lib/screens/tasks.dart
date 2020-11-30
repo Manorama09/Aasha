@@ -49,17 +49,17 @@ class _TasksScreenState extends State<TasksScreen> {
           elevation: 0.1,
           backgroundColor: const Color(0xffF4EEFF),
           title: Padding(
-            padding: const EdgeInsets.fromLTRB(90, 0, 0, 0),
-            child: Text("Tasks",
+            padding: const EdgeInsets.fromLTRB(40, 0, 0, 0),
+            child: Text("E-Challenges",
                 style: GoogleFonts.dancingScript(
                     color: const Color(0xff1E2558),
-                    fontSize: 45,
+                    fontSize: 35,
                     fontWeight: FontWeight.w700)),
           ),
           bottom: TabBar(
             tabs: [
-              Tab(child:Text("Daily Tasks"),icon: Icon(Icons.list)),
-              Tab(child:Text("Long Tasks"),icon: Icon(Icons.note)),
+              Tab(child:Text("Daily"),icon: Icon(Icons.list)),
+              Tab(child:Text("Long Term"),icon: Icon(Icons.calendar_today)),
             ],
           ),
         ),

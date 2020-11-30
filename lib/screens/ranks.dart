@@ -35,11 +35,11 @@ class RanksScreen extends StatelessWidget {
           elevation: 0.1,
           backgroundColor: const Color(0xffF4EEFF),
           title: Padding(
-            padding: const EdgeInsets.fromLTRB(80, 0, 0, 0),
-            child: Text("Ranks",
+            padding: const EdgeInsets.fromLTRB(60, 0, 0, 0),
+            child: Text("Leaderboard",
                 style: GoogleFonts.dancingScript(
                     color: const Color(0xff1E2558),
-                    fontSize: 45,
+                    fontSize: 35,
                     fontWeight: FontWeight.w700)),
           ),
           bottom: TabBar(
