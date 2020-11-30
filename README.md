@@ -18,7 +18,7 @@
 2. Twitter API
 
 ### Prototype
-<img src="https://j.gifs.com/Gv3j57.gif" width="600" height="350" />
+<img src="https://j.gifs.com/AN337B.gif" width="600" height="350" />
 
 <p align="center">
 	Made with :heart: to save our planet :earth_asia:
