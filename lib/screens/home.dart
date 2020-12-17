@@ -136,7 +136,7 @@ class HomeScreen extends StatelessWidget {
                           );
                         },
                         child: button(
-                            "About",
+                            "Report",
                             context,
                             Icon(
                               Icons.people,

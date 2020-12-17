@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
             color: Colors.white,
           ),
         ),
-        primaryColor: Colors.amber,
+        primaryColor: Colors.deepPurple,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: WelcomeScreen(),
