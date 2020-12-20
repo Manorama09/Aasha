@@ -59,8 +59,8 @@ class _TasksScreenState extends State<TasksScreen> {
           ),
           bottom: TabBar(
             tabs: [
-              Tab(child:Text("Daily Challenges"),icon: Icon(CustomIcons.calendar)),
-              Tab(child:Text("Lifestyle Changes"),icon: Icon(CustomIcons.ecology)),
+              Tab(child:Text("Daily Challenges",style: TextStyle(color: Colors.deepPurple,)),icon: Icon(CustomIcons.calendar, color: Colors.deepPurple,)),
+              Tab(child:Text("Lifestyle Changes",style: TextStyle(color: Colors.deepPurple,)),icon: Icon(CustomIcons.ecology, color: Colors.deepPurple,)),
             ],
           ),
         ),

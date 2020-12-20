@@ -44,8 +44,8 @@ class RanksScreen extends StatelessWidget {
           ),
           bottom: TabBar(
             tabs: [
-              Tab(child:Text("Individual"),icon: Icon(Icons.people)),
-              Tab(child:Text("Regions"),icon: Icon(Icons.location_city)),
+              Tab(child:Text("Individual",style: TextStyle(color: Colors.deepPurple,)),icon: Icon(Icons.people, color: Colors.deepPurple,)),
+              Tab(child:Text("Regions",style: TextStyle(color: Colors.deepPurple,)),icon: Icon(Icons.location_city, color: Colors.deepPurple,)),
             ],
           ),
         ),

@@ -69,7 +69,21 @@ class _AboutScreenState extends State<AboutScreen> {
                 hintText: 'Register your complaint here',
               ),
               autofocus: false,
-            ))
+            )),
+        SizedBox(height: 40),
+        FlatButton(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+          color: const Color(0xff4DA6E9),
+          onPressed: () {},
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 55),
+            child: Text("Report the Area",
+                style: GoogleFonts.workSans(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w400)),
+          ),
+        ),
       ])),
       //bottomNavigationBar: BottomNavBar(),
     );

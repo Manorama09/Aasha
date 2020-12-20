@@ -139,7 +139,7 @@ class HomeScreen extends StatelessWidget {
                             "Report",
                             context,
                             Icon(
-                              Icons.people,
+                              Icons.warning,
                               size: 60,
                               color: Colors.white,
                             )),

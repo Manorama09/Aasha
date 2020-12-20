@@ -14,6 +14,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Aasha',
       theme: ThemeData(
+        appBarTheme:
+            AppBarTheme(iconTheme: IconThemeData(color: Colors.deepPurple)),
         textTheme: TextTheme(
           bodyText2: TextStyle(
             color: Colors.white,
